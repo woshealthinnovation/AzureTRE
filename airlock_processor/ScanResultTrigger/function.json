@@ -1,0 +1,21 @@
+{
+  "scriptFile": "__init__.py",
+  "entryPoint": "main",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "%AIRLOCK_SCAN_RESULT_QUEUE_NAME%",
+      "connection": "%SERVICEBUS_CONNECTION_NAME%",
+      "accessRights": "listen",
+      "autoComplete": true
+    },
+    {
+      "type": "eventGrid",
+      "name": "outputEvent",
+      "connection": "EVENT_GRID_STEP_RESULT_CONNECTION",
+      "direction": "out"
+    }
+  ]
+}
