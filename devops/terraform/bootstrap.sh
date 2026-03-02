@@ -47,7 +47,7 @@ check_role_assignments() {
 # Baseline Azure resources
 echo -e "\n\e[34m»»» 🤖 \e[96mCreating resource group and storage account\e[0m..."
 # shellcheck disable=SC2154
-az group create --resource-group "$TF_VAR_mgmt_resource_group_name" --location "$LOCATION" -o table
+az group create --resource-group "$TF_VAR_mgmt_resource_group_name" --location "$LOCATION" --tags Environment=Prod -o table
 
 # shellcheck disable=SC2154
 if ! az storage account show --resource-group "$TF_VAR_mgmt_resource_group_name" --name "$TF_VAR_mgmt_storage_account_name" --query "name" -o none 2>/dev/null; then
