@@ -60,6 +60,7 @@ resource "azurerm_resource_group" "core" {
     tre_id     = var.tre_id
     source     = "https://github.com/microsoft/AzureTRE/"
     ci_git_ref = var.ci_git_ref # TODO: not include if empty
+    Environment = "Prod"
   }
 
   lifecycle { ignore_changes = [tags] }
