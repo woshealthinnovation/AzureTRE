@@ -27,6 +27,7 @@ custom:
     "4 CPU | 16GB RAM": Standard_D4s_v5
     "8 CPU | 32GB RAM": Standard_D8s_v5
     "16 CPU | 64GB RAM": Standard_D16s_v5
+    "24 CPU | 220GB RAM | A100 GPU": Standard_NC24ads_A100_v4
   image_options:
     "Ubuntu 22.04 LTS":
       source_image_reference:
