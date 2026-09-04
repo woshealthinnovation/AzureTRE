@@ -5,7 +5,8 @@ resource "azurerm_resource_group" "ws" {
     local.tre_workspace_tags,
     {
       project = "Azure Trusted Research Environment",
-      source  = "https://github.com/microsoft/AzureTRE/"
+      source  = "https://github.com/microsoft/AzureTRE/",
+      Environment = "Prod"
     },
   )
 

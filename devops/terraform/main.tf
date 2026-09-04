@@ -14,6 +14,7 @@ resource "azurerm_resource_group" "mgmt" {
   tags = {
     project = "Azure Trusted Research Environment"
     source  = "https://github.com/microsoft/AzureTRE/"
+    Environment = "Prod"
   }
 
   lifecycle { ignore_changes = [tags] }
