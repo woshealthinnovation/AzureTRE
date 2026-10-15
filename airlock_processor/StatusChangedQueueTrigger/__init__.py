@@ -236,6 +236,6 @@ def _get_tre_id():
     try:
         tre_id = os.environ["TRE_ID"]
     except KeyError as e:
-        logging.error(f'Missing environment variable: {e}')
+        logging.error(f"Missing environment variable: {e}")
         raise
-    return tre_id
+    return tre_id.replace("-", "").lower()
