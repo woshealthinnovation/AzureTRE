@@ -37,7 +37,7 @@ STORAGE_ENDPOINT = config.STORAGE_ENDPOINT_SUFFIX
 
 
 def get_account_by_request(airlock_request: AirlockRequest, workspace: Workspace) -> str:
-    tre_id = config.TRE_ID
+    tre_id = config.TRE_ID.replace("-", "").lower()
     short_workspace_id = workspace.id[-4:]
     if airlock_request.type == constants.IMPORT_TYPE:
         if airlock_request.status == AirlockRequestStatus.Draft:
